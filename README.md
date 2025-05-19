@@ -1,4 +1,3 @@
-
 # 💰 Bank Backend API
 
 An Express.js backend for a banking application that provides secure user authentication, account management, and administrative controls.
@@ -85,10 +84,10 @@ yarn dev
 
 ### 🧍‍♂️ Auth
 
-| Method | Endpoint         | Description       |
-|--------|------------------|-------------------|
-| POST   | `/auth/register` | Register user     |
-| POST   | `/auth/login`    | Login user        |
+| Method | Endpoint         | Description   |
+| ------ | ---------------- | ------------- |
+| POST   | `/auth/register` | Register user |
+| POST   | `/auth/login`    | Login user    |
 
 #### 📦 Sample Payload
 
@@ -100,12 +99,6 @@ yarn dev
   "password": "secure123"
 }
 
-![alt text](image.png)
-
-## Response with token
-![alt text](image-1.png)
-
-//!And yes it's superfast 
 
 // Login
 {
@@ -114,28 +107,32 @@ yarn dev
 }
 ```
 
+![alt text](image.png)
+
+## Response with token
+
+![alt text](image-1.png)
+
+//!And yes it's superfast
+
 ### 👤 Profile
 
-| Method | Endpoint         | Description                |
-|--------|------------------|----------------------------|
-| PATCH  | `/profile`       | update user profile        |
-
+| Method | Endpoint   | Description         |
+| ------ | ---------- | ------------------- |
+| PATCH  | `/profile` | update user profile |
 
 ### 👤 Users(coming soon)
 
-| Method | Endpoint         | Description                |
-|--------|------------------|----------------------------|
-| PATCH  | `/users/:id`     | Admin update user profile  |
-
+| Method | Endpoint     | Description               |
+| ------ | ------------ | ------------------------- |
+| PATCH  | `/users/:id` | Admin update user profile |
 
 ### 🏦 Accounts
 
 | Method | Endpoint           | Description                 |
-|--------|--------------------|-----------------------------|
+| ------ | ------------------ | --------------------------- |
 | POST   | `/accounts`        | Create account              |
 | PATCH  | `/accounts/update` | Update account (user/admin) |
-
-
 
 #### 📦 Sample Account Payload
 
@@ -150,10 +147,10 @@ yarn dev
 
 ## 🧰 Scripts
 
-| Command       | Description         |
-|---------------|---------------------|
-| `yarn start`  | Start server        |
-| `yarn dev`    | Start with nodemon  |
+| Command      | Description        |
+| ------------ | ------------------ |
+| `yarn start` | Start server       |
+| `yarn dev`   | Start with nodemon |
 
 ---
 
@@ -172,10 +169,10 @@ http://localhost:5000/api-docs
 
 ## 🔐 Roles
 
-| Role  | Permissions                                   |
-|-------|-----------------------------------------------|
-| User  | Manage own account                            |
-| Admin | Manage users and all accounts                 |
+| Role  | Permissions                   |
+| ----- | ----------------------------- |
+| User  | Manage own account            |
+| Admin | Manage users and all accounts |
 
 ---
 
@@ -205,4 +202,3 @@ http://localhost:5000/api-docs
 ## 🤝 Contributing
 
 Feel free to fork and contribute! Pull requests are welcome.
-
