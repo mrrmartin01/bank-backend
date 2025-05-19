@@ -100,6 +100,13 @@ yarn dev
   "password": "secure123"
 }
 
+![alt text](image.png)
+
+## Response with token
+![alt text](image-1.png)
+
+//!And yes it's superfast 
+
 // Login
 {
   "email": "john@example.com",
