@@ -27,6 +27,7 @@ bank-backend/
 ├── models/               # Mongoose models (User, Account)
 ├── routes/               # Route definitions
 ├── src/
+│   ├── docs/             # Swagger endpoint docs
 │   └── utils/            # Utility functions
 ├── swagger/              # Swagger docs configuration
 ├── .env                  # Environment variables
@@ -84,10 +85,10 @@ yarn dev
 
 ### 🧍‍♂️ Auth
 
-| Method | Endpoint         | Description   |
-| ------ | ---------------- | ------------- |
-| POST   | `/auth/register` | Register user |
-| POST   | `/auth/login`    | Login user    |
+| Method | Endpoint           | Description   |
+| ------ | ------------------ | ------------- |
+| POST   | `/auth/register`   | Register user |
+| POST   | `/auth/login`      | Login user    |
 
 #### 📦 Sample Payload
 
@@ -99,7 +100,6 @@ yarn dev
   "password": "secure123"
 }
 
-
 // Login
 {
   "email": "john@example.com",
@@ -107,32 +107,31 @@ yarn dev
 }
 ```
 
-![alt text](image.png)
+### 👤 Users
 
-## Response with token
+| Method | Endpoint         | Description                   |
+| ------ | ---------------- | ----------------------------- |
+| PATCH  | `/users/:id`     | Admin update user profile     |
 
-![alt text](image-1.png)
+#### 📦 Sample Payload
 
-//!And yes it's superfast
-
-### 👤 Profile
-
-| Method | Endpoint   | Description         |
-| ------ | ---------- | ------------------- |
-| PATCH  | `/profile` | update user profile |
-
-### 👤 Users(coming soon)
-
-| Method | Endpoint     | Description               |
-| ------ | ------------ | ------------------------- |
-| PATCH  | `/users/:id` | Admin update user profile |
+```json
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com",
+  "role": "admin"
+}
+```
 
 ### 🏦 Accounts
 
-| Method | Endpoint           | Description                 |
-| ------ | ------------------ | --------------------------- |
-| POST   | `/accounts`        | Create account              |
-| PATCH  | `/accounts/update` | Update account (user/admin) |
+| Method | Endpoint                     | Description                        |
+| ------ | ---------------------------- | ---------------------------------- |
+| POST   | `/account/create`            | Create account                     |
+| PATCH  | `/account/update/:id`        | Update own account                 |
+| PATCH  | `/account/admin-update/:id`  | Admin update any account           |
+| GET    | `/account/`                  | Get all accounts for logged-in user|
+| GET    | `/account/all`               | Get all accounts (admin only)      |
 
 #### 📦 Sample Account Payload
 

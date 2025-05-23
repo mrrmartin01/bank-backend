@@ -19,6 +19,7 @@
  *         required: true
  *         schema:
  *           type: string
+ *         description: User ID
  *     requestBody:
  *       content:
  *         application/json:
@@ -29,6 +30,7 @@
  *                 type: string
  *               email:
  *                 type: string
+ *                 format: email
  *               role:
  *                 type: string
  *                 enum: [user, admin]
@@ -37,4 +39,6 @@
  *         description: User updated successfully
  *       403:
  *         description: Admin access only
+ *       404:
+ *         description: User not found
  */

@@ -9,13 +9,13 @@ const generateToken = (user) => {
 
 exports.register = async (req, res, next) => {
   try {
-    const { email, password, name } = req.body;
+    const { email, password, firstName, lastName, address, phoneNumber } = req.body;
     const userExists = await User.findOne({ email });
 
-    if (!email || !password || !name) {
+    if (!email || !password || !firstName || !lastName || !address ||!phoneNumber) {
       return res
         .status(400)
-        .json({ message: "Email, password and name are required" });
+        .json({ message: "All fields are required" });
     }
     if (password.length < 6) {
       return res
@@ -38,7 +38,7 @@ exports.register = async (req, res, next) => {
       return res.status(400).json({ message: "User already exists" });
 
 
-    const user = await User.create({ email, password, name });
+    const user = await User.create({ email, password, firstName, lastName, address, phoneNumber });
     const token = generateToken(user);
     res.status(201).json({ token });
   } catch (error) {

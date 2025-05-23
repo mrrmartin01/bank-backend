@@ -23,11 +23,15 @@
  *                 type: string
  *               email:
  *                 type: string
+ *                 format: email
  *               password:
  *                 type: string
+ *                 format: password
  *     responses:
  *       201:
  *         description: User created successfully
+ *       400:
+ *         description: Invalid input
  */
 
 /**
@@ -46,9 +50,13 @@
  *             properties:
  *               email:
  *                 type: string
+ *                 format: email
  *               password:
  *                 type: string
+ *                 format: password
  *     responses:
  *       200:
  *         description: Login successful
+ *       400:
+ *         description: Invalid credentials
  */
