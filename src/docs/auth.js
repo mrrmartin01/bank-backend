@@ -17,9 +17,11 @@
  *         application/json:
  *           schema:
  *             type: object
- *             required: [name, email, password]
+ *             required: [firstName, lastName, email, password, address, phoneNumber]
  *             properties:
- *               name:
+ *               firstName:
+ *                 type: string
+ *               lastName:
  *                 type: string
  *               email:
  *                 type: string
@@ -27,6 +29,12 @@
  *               password:
  *                 type: string
  *                 format: password
+ *               address:
+ *                 type: object
+ *                 description: User address
+ *                 properties: {}  
+ *               phoneNumber:
+ *                 type: string
  *     responses:
  *       201:
  *         description: User created successfully
