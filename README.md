@@ -201,3 +201,5 @@ http://localhost:5000/api-docs
 ## 🤝 Contributing
 
 Feel free to fork and contribute! Pull requests are welcome.
+
+Dark-themed fella👣
