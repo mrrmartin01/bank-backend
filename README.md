@@ -1,6 +1,6 @@
 # 💰 Bank Backend API
 
-An Express.js backend for a banking application that provides secure user authentication, account management, and administrative controls.
+An Express generate backend for a banking application that provides secure user authentication, account management, and administrative controls.
 
 ## 🚀 Features
 
